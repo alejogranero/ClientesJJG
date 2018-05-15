@@ -19,7 +19,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimaryDark"
-            android:src="@drawable/addPhoto" />
+            android:src="@drawable/addphoto" />
 
         <EditText
             android:id="@+id/editTextNombre"
@@ -38,27 +38,55 @@
             android:layout_centerHorizontal="true"
             android:ems="10"
             android:hint="Apellido"/>
-        <EditText
-            android:id="@+id/fecha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="date"
-            android:focusable="false"
-            android:layout_below="@id/editTextApellido"
-            android:layout_centerHorizontal="true"
-            android:hint="Fecha de nacimiento"
-            android:clickable="true"
-            android:maxLines="1" />
 
         <EditText
             android:id="@+id/DNI"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/fecha"
+            android:layout_below="@id/editTextApellido"
+            android:hint="DNI"
             android:layout_centerHorizontal="true"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/DomicilioCobro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Domicilio de cobro"
+            android:layout_below="@id/DNI"
+            android:layout_centerHorizontal="true"
+            />
+        <EditText
+            android:id="@+id/telefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono"
             android:inputType="number"
+            android:layout_below="@id/DomicilioCobro"
+            android:layout_centerHorizontal="true"
+            />
+        
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/telefono"
+            android:layout_centerHorizontal="true"
+            android:minWidth="160dp"
+            android:text="Agregar"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
             />
 
+        <Button
+            android:id="@+id/btnList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnAdd"
+            android:layout_centerHorizontal="true"
+            android:minWidth="160dp"
+            android:text="Listar"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            />
 
 
     </RelativeLayout>
