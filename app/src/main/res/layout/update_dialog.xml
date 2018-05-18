@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imageViewCliente"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimaryDark"
+        android:src="@drawable/addphoto"/>
+
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Nombre"
+        />
+    <EditText
+        android:id="@+id/editTextApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNombre"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Apellido"/>
+
+    <EditText
+        android:id="@+id/DNI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextApellido"
+        android:hint="DNI"
+        android:layout_centerHorizontal="true"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/DomicilioCobro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Domicilio de cobro"
+        android:layout_below="@id/DNI"
+        android:layout_centerHorizontal="true"
+        />
+    <EditText
+        android:id="@+id/telefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Teléfono"
+        android:inputType="number"
+        android:layout_below="@id/DomicilioCobro"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/telefono"
+        android:layout_centerHorizontal="true"
+        android:minWidth="160dp"
+        android:text="Guardar"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        />
+
+</LinearLayout>

@@ -1,6 +1,6 @@
 package com.grafflersys.alejo.clientes;
 
-public class Model {
+public class Cliente {
     private int id;
     private String nombre;
     private String apellido;
@@ -9,7 +9,7 @@ public class Model {
     private String telefono;
     private byte[] imagen;
 
-    public Model(int id, String nombre, String apellido, String dni, String domicilioCobro, String telefono, byte[] imagen) {
+    public Cliente(int id, String nombre, String apellido, String dni, String domicilioCobro, String telefono, byte[] imagen) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;

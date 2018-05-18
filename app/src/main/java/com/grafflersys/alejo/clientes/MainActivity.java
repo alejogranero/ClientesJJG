@@ -1,6 +1,7 @@
 package com.grafflersys.alejo.clientes;
 
 import android.Manifest;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -55,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 );
             }
         });
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Nuevo cliente");
+
 
         //Creando BD
         nSQLiteHelper = new SQLiteHelper(this, "CLIENTESBD.sqlite", null, 1);

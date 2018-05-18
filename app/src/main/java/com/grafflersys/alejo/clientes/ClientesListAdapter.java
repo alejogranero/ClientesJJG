@@ -16,9 +16,9 @@ public class ClientesListAdapter extends BaseAdapter {
 
     private Context context;
     private int layout;
-    private ArrayList<Model> clientesList;
+    private ArrayList<Cliente> clientesList;
 
-    public ClientesListAdapter(Context context, int layout, ArrayList<Model> clientesList) {
+    public ClientesListAdapter(Context context, int layout, ArrayList<Cliente> clientesList) {
         this.context = context;
         this.layout = layout;
         this.clientesList = clientesList;
@@ -63,14 +63,14 @@ public class ClientesListAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder)row.getTag();
         }
-        Model model = clientesList.get(i);
-        holder.txtNombre.setText(model.getNombre());
-        holder.txtApellido.setText(model.getApellido());
-        holder.txtDni.setText(model.getDni());
-        holder.txtDomicilio.setText(model.getDomicilioCobro());
-        holder.txtTelefono.setText(model.getTelefono());
+        Cliente cliente = clientesList.get(i);
+        holder.txtNombre.setText(cliente.getNombre());
+        holder.txtApellido.setText(cliente.getApellido());
+        holder.txtDni.setText(cliente.getDni());
+        holder.txtDomicilio.setText(cliente.getDomicilioCobro());
+        holder.txtTelefono.setText(cliente.getTelefono());
 
-        byte[] clienteImage = model.getImagen();
+        byte[] clienteImage = cliente.getImagen();
         Bitmap bitmap = BitmapFactory.decodeByteArray(clienteImage, 0, clienteImage.length);
         holder.imageView.setImageBitmap(bitmap);
         return row;
